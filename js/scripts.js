@@ -1,8 +1,10 @@
 //Para cambiar visualización de navbar
 window.addEventListener("DOMContentLoaded", (event) => {
+
   // Navbar shrink function
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
+    
     if (!navbarCollapsible) {
       return;
     }
@@ -44,6 +46,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 //TO DO
 // Declare las variables del formulario login
-
+  let correo = document.body.querySelector("#inputEmail");
+  let password = document.body.querySelector("#inputPassword");
+  let btn = document.body.querySelector("#send");
 // Implemente el evento para validar
-// btn.addEventListener("click", function (evt) ....
+   btn.addEventListener("click", function (evt) {
+     evt.preventDefault();
+     if(correo === "admin" && password ==="12345"){
+       prompt("Bienvenido");
+     }else{
+       prompt("Usuario o contraseña incorrectos");
+     }
+   }
+  );
